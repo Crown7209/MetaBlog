@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "i": "^0.3.7",
+    "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "postcss": "^8",

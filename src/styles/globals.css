@@ -1,33 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 24px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.background {
+    background-image: url(https://s3-alpha-sig.figma.com/img/eb4f/aad2/4394e91108e011b0d07581596959713b?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c9XCVAOE59hmaa4d9-sfPvOkk9m89EfWDtg7z7zR0bLFNdL5eDNFYsg6gqOjoSVoDQzxolOe9naqTGE-LA3pHXF9xyBIy2aFLTOw0VcEjqAMYNCjtjZr1JNtfeV9SCJUF5unnMAoqOMrPN33XcUTSJ~aIaxX1ACrB84k9xahC~6pLz6UHg8W0EG4OKk45KSO-OU~Hs4xHywZVSQoRE9lpSfOBUqsgfJh8FzmSMFaLoQv5vo2O7Lud8IAU-0FQCq~XrLysMbcFdWM7mxRnjdSKIw9VL~nMTpxJhpq0yJRqVJ63sv4M~sjQ6ITQ~lwPCbOi0x4Gzw8O9dDNO~9F0JnWg__);
 }
