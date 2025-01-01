@@ -9,7 +9,7 @@ export const RightArrow = () => {
     >
       <path
         d="M1 1L8.5 8.5L1 16"
-        stroke="black"
+        stroke="var(--arrow)"
         stroke-linecap="round"
         stroke-linejoin="round"
       />

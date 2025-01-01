@@ -31,8 +31,8 @@ export const ArticleCard = ({ article }) => {
   };
 
   return (
-    <div className="max-w-[392px] w-full border-[#E8E8EA] bg-white rounded-xl border p-4 flex flex-col gap-4 cursor-pointer hover:shadow-md hover:border-[rgb(211,211,211)] duration-200">
-      <div className="overflow-hidden relative rounded-md">
+    <div className="md:max-w-[392px] w-full border-[var(--border)] bg-[var(--background)] rounded-xl border md:p-4 p-2 flex flex-col gap-4 cursor-pointer hover:shadow-md hover:border-[var(--border-hover)] duration-200">
+      <div className="overflow-hidden relative md:rounded-md rounded-lg">
         <div
           className="hover:scale-110 duration-150 ease-linear"
           style={{
@@ -45,20 +45,20 @@ export const ArticleCard = ({ article }) => {
           }}
         ></div>
       </div>
-      <div className="p-2 flex flex-col gap-5">
-        <div className="flex flex-col gap-4">
+      <div className="p-2 flex flex-col md:gap-5 gap-3">
+        <div className="flex flex-col md:gap-4 gap-2">
           <div className="flex">
-            <p className="px-[10px] py-1 bg-[rgba(75,107,251,0.05)] rounded-md text-[#4B6BFB] text-sm font-medium font-text">
+            <p className="md:px-[10px] px-2 py-1 bg-[rgba(75,107,251,0.05)] rounded-md text-[#4B6BFB] md:text-sm text-xs font-medium font-text">
               {article?.tag_list[0]}
             </p>
           </div>
-          <div className="overflow-hidden h-[84px]">
-            <p className="text-2xl font-semibold font-text text-[#181A2A] leading-7">
+          <div className="overflow-hidden md:h-[84px] h-[72px]">
+            <p className="md:text-2xl text-xl font-semibold font-text text-[var(--primary-text)] md:leading-7 leading-6">
               {article?.description}
             </p>
           </div>
         </div>
-        <p className="text-base font-light font-text text-[#97989F]">
+        <p className="md:text-base text-sm font-normal font-text text-[var(--date)]">
           {generatMonth(publishedDate.getMonth())} {publishedDate.getDay()},{" "}
           {publishedDate.getFullYear()}
         </p>

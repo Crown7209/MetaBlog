@@ -16,6 +16,7 @@ module.exports = {
         text: ["Work Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
+        source: ["PT Serif", "serif"],
       }
     },
   },

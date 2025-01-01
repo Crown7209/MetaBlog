@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { TrendingCard } from "./TrendingCard";
+import Link from "next/link";
 
 export const Trending = () => {
   const [articles, setArticles] = useState([]);
-  const [page, setPage] = useState(1);
 
   const fetchData = () => {
     fetch(`https://dev.to/api/articles?per_page=4&&top=2`)
@@ -13,18 +13,22 @@ export const Trending = () => {
 
   useEffect(() => {
     fetchData();
-  }, [page]);
+  }, []);
   return (
-    <div className="flex flex-col gap-[30px] max-w-[1216px] w-full">
-      <p className="text-2xl leading-7 font-bold text-[#181A2A] font-text">
+    <div className="flex flex-col md:gap-[30px] gap-6 max-w-[1216px] w-full md:px-0 px-2">
+      <p className="text-2xl leading-7 md:font-bold font-semibold text-[var(--primary-text)] font-text">
         Trending
       </p>
 
-      <div className="flex gap-5">
-        <div className="w-full flex gap-6">
-        {articles.map((article) => {
-          return <TrendingCard article={article} />;
-        })}
+      <div className="flex gap-5 overflow-scroll md:overflow-auto">
+        <div className="w-full flex md:gap-6 gap-2">
+          {articles.map((article) => {
+            return (
+              <Link href={`blog-list/${article?.id}`}>
+                <TrendingCard article={article} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

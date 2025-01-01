@@ -7,29 +7,29 @@ import { BlogLogo } from "../svg/BlogLogo";
 
 export const Footer = () => {
   return (
-    <footer className="w-full py-16 flex justify-center bg-[#F6F6F7] border-t border-[#E8E8EA]">
+    <footer className="w-full md:py-16 py-8 md:px-0 px-4 flex justify-center bg-[var(--footer-background)] border-t border-[var(--border)]">
       <div className="max-w-[1216px] w-full flex flex-col gap-[25px] ">
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-6 max-w-[280px] w-full">
-            <div className="flex flex-col gap-3">
-              <p className="text-[#181A2A] text-lg font-semibold font-jakarta">
+        <div className="md:flex md:flex-row md:justify-between flex flex-col items-center md:items-start gap-6 md:gap-0">
+          <div className="flex flex-col md:gap-6 gap-3 max-w-[280px] w-full">
+            <div className="flex flex-col gap-3 text-center md:text-start">
+              <p className="text-[var(--primary-text)] text-lg font-semibold font-jakarta">
                 About
               </p>
-              <p className="text-[#696A75] text-base font-normal font-jakarta">
+              <p className="text-[var(--button-border)] text-base font-normal font-jakarta">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam
               </p>
             </div>
-            <div className="flex flex-col gap-1 ">
-              <p className="text-[#3B3C4A] text-base font-normal font-jakarta">
-                <span className="text-[#181A2A] text-base font-semibold font-jakarta">
+            <div className="flex flex-col gap-1 text-center md:text-start">
+              <p className="text-[var(--button-border)] text-base font-normal font-jakarta">
+                <span className="text-[var(--primary-text)] text-base font-semibold font-jakarta">
                   Email :
                 </span>{" "}
                 info@jstemplate.net
               </p>
-              <p className="text-[#3B3C4A] text-base font-normal font-jakarta">
-                <span className="text-[#181A2A] text-base font-semibold font-jakarta">
+              <p className="text-[var(--button-border)] text-base font-normal font-jakarta">
+                <span className="text-[var(--primary-text)] text-base font-semibold font-jakarta">
                   Phone :
                 </span>{" "}
                 880 123 456 789
@@ -37,76 +37,76 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <a
-              href="./"
-              className="text-base font-normal text-[#3B3C4A] font-jakarta"
+          <div className="flex md:flex-col gap-4">
+            <Link
+              href="/"
+              className="text-base font-normal text-[var(--button-border)] font-jakarta relative before:absolute before:bottom-[-4px] before:h-[3px] before:bg-[#D4A373] before:left-0 before:w-[0%] before:duration-300 before:hover:w-full hover:text-[var(--arrow)]"
             >
               Home
-            </a>
-            <a
-              href="./blog-list"
-              className="text-base font-normal text-[#3B3C4A] font-jakarta"
+            </Link>
+            <Link
+              href="/blog-list"
+              className="text-base font-normal text-[var(--button-border)] font-jakarta relative before:absolute before:bottom-[-4px] before:h-[3px] before:bg-[#D4A373] before:left-0 before:w-[0%] before:duration-300 before:hover:w-full hover:text-[var(--arrow)]"
             >
               Blog
-            </a>
-            <a
-              href="./contact-us"
-              className="text-base font-normal text-[#3B3C4A] font-jakarta"
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-base font-normal text-[var(--button-border)] font-jakarta relative before:absolute before:bottom-[-4px] before:h-[3px] before:bg-[#D4A373] before:left-0 before:w-[0%] before:duration-300 before:hover:w-full hover:text-[var(--arrow)]"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
-          <div className="max-w-[280px] w-full flex justify-end gap-[26.67px]">
-            <a href="https://www.facebook.com/">
+          <div className="max-w-[280px] w-full flex md:justify-end justify-center gap-[12px]">
+            <Link href="https://www.facebook.com/" className="p-1.5 hover:bg-[var(--border)] rounded-lg duration-100">
               <FacebookIcon />
-            </a>
-            <a href="https://x.com">
+            </Link>
+            <Link href="https://x.com" className="p-1.5 hover:bg-[var(--border)] rounded-lg duration-100">
               <TwitterIcon />
-            </a>
-            <a href="https://www.instagram.com/">
+            </Link>
+            <Link href="https://www.instagram.com/" className="p-1.5 hover:bg-[var(--border)] rounded-lg duration-100">
               <InstagramIcon />
-            </a>
-            <a href="https://mn.linkedin.com/">
+            </Link>
+            <Link href="https://mn.linkedin.com/" className="p-1.5 hover:bg-[var(--border)] rounded-lg duration-100">
               <LinkedinIcon />
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className="py-5 flex justify-between items-center border-t border-[#DCDDDF]">
+        <div className="py-5 flex justify-between items-center border-t border-[var(--border)]">
           <div className="flex items-center gap-[10px]">
             <BlogLogo />
             <div className="flex flex-col gap-[2px]">
-              <p className="text-xl font-normal font-jakarta text-[#141624]">
+              <p className="text-xl font-normal font-jakarta text-[var(--logo)]">
                 Meta <span className="font-extrabold">Blog</span>
               </p>
-              <p className="text text-[#3B3C4A]">
+              <p className="text text-[var(--button-border)]">
                 © All Rights Reserved.
               </p>
             </div>
           </div>
-          <div className="flex gap-4 items-center">
-            <a
-              href=""
-              className="text text-[#3B3C4A]"
+          <div className="flex flex-col md:flex-row md:gap-4 gap-2 md:items-center">
+            <Link
+              href="/"
+              className="text text-[var(--button-border)] hover:text-[var(--arrow)] duration-100"
             >
               Terms of Use
-            </a>
-            <div className="h-6 w-[1px] bg-[#E8E8EA]"></div>
-            <a
-              href=""
-              className="text text-[#3B3C4A]"
+            </Link>
+            <div className="h-6 w-[1px] bg-[var(--border)] hidden md:block"></div>
+            <Link
+              href="/"
+              className="text text-[var(--button-border)] hover:text-[var(--arrow)] duration-100"
             >
               Privacy Policy
-            </a>
-            <div className="h-6 w-[1px] bg-[#E8E8EA]"></div>
-            <a
-              href=""
-              className="text text-[#3B3C4A]"
+            </Link>
+            <div className="h-6 w-[1px] bg-[var(--border)] hidden md:block"></div>
+            <Link
+              href="/"
+              className="text text-[var(--button-border)] hover:text-[var(--arrow)] duration-100"
             >
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
